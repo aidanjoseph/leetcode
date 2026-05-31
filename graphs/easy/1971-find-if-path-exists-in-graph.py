@@ -4,6 +4,7 @@ union find is a solution could learn
 
 kinda suck at these adjancey list representations
 chill with 2d graph representations but this kinda weird yeah 
+added some more comments
 '''
 class Solution:
     def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:
