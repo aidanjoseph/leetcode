@@ -5,6 +5,7 @@ but understand
 you get inorder traversal to make it easy
 then you do a create thing, calculate mid index and stuff
 kinda like a binary search type thing
+similar to 108, --> precursor
 '''
 # Definition for a binary tree node.
 # class TreeNode:
