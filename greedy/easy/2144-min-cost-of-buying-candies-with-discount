@@ -1,0 +1,41 @@
+'''
+not bad
+kinda got hit from input size,
+sorting naive solution, greedy 
+don't think there is better
+o(n) solution since costs limited to < 100
+counting sort
+freq array of size 101, 0..100
+iterate backward from 100 to 1, 
+for i in range(100, 0, 0)
+'''
+class Solution:
+    def minimumCost(self, cost: List[int]) -> int:
+        #greedy
+        # cost.sort()
+        # res = 0
+        # counter = 0
+        # for i in range(len(cost) -1, -1, -1):
+        #     counter += 1
+        #     if counter % 3 == 0:
+        #         continue
+        #     res += cost[i]
+        # return res
+
+        #linear counting sort
+        freq = [0] * 101 
+        for c in cost:
+            freq[c] += 1
+        
+        count = 0
+        total = 0 
+        for i in range(100, -1, -1):
+            while freq[i] > 0:
+                if count == 2:
+                    count = 0
+                else:
+                    count += 1
+                    total += i
+                freq[i] -= 1
+        return total
+        
